@@ -5,16 +5,22 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+import { NavService } from './services/nav.service';
+import { ObservingComponent } from './components/observing/observing.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ObservingComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [NavService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
